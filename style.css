@@ -266,7 +266,6 @@ main {
   font-size: 3vw;
 }
 .info {
-  color: #1c7293;
   display: flex;
   align-items: center;
   gap: 1%;
@@ -283,10 +282,19 @@ main {
 }
 .cart {
   border: 1px solid grey;
+  min-height: 25vmin;
   width: 80%;
   text-align: center;
   padding: 5px;
   border-radius: 20px;
+  background-image: url(/icons/no-item.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.cart-view h1{
+  text-align: center;
+  width: 70%;
 }
 .cart-list {
   display: flex;
@@ -370,6 +378,51 @@ main {
 }
 .book label {
   text-indent: 10px;
+}
+.popup{
+  position: fixed;
+  bottom: 30px;
+  right:0;
+}
+.error,.order-placed{
+  height:10vmin;
+  width: 35vmin;
+  background-color: #C4E0F9;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.error{
+  color: red;
+}
+.error:after,.order-placed:after{
+  content: "";
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: wid 5s linear forwards;
+}
+@keyframes wid {
+  to{
+    width: 0;
+  }
+  
+}
+.error:after{
+  background-color: red;
+}
+.order-placed:after{
+  background-color: green;
+}
+.order-placed{
+  color: green;
 }
 .quality-description {
   height: 35vh;
@@ -579,7 +632,6 @@ footer div {
   }
   .services {
     flex-direction: column;
-    height: 102vh;
   }
   .service-list {
     width: 100%;
@@ -597,6 +649,7 @@ footer div {
     font-size: 2.5vw;
     padding: 0;
   }
+  
   .cart-view {
     margin-top: 10px;
     padding: 0;
@@ -628,6 +681,8 @@ footer div {
   .quality-description {
     height: max-content;
     gap: 1%;
+    margin-top: 0;
+
   }
   .achievement {
     font-size: 2.5vw;

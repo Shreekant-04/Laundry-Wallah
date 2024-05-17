@@ -227,25 +227,26 @@
           <h1 class="tot">Total :</h1>
           <p class="total-price">
             <span class="material-symbols-outlined"> currency_rupee </span>
-            1000.00
+            <span class="amt"></span>
           </p>
         </div>
-        <form action="" class="book">
+        <form class="book" method="dialog">
           <h3>Book Now</h3>
           <label for="email" class="emailid"
             >Email ID <br />
-            <input type="email" name="name" id="email" />
+            <input type="email" name="email" id="email" required />
           </label>
           <label for="name" class="fullname"
             >Full Name <br />
-            <input type="text" />
+            <input type="text" id="name" name="name" required />
           </label>
           <label for="number" class="number"
             >Phone Number <br />
-            <input type="tel" name="number" id="number" />
+            <input type="number" name="number" id="number" />
           </label>
-          <button type="submit" class="order">Book Now</button>
+          <button class="order">Book Now</button>
         </form>
+        <div class="popup"></div>
       </div>
     </section>
     <section class="quality-description">
@@ -375,5 +376,13 @@
       </div>
     </footer>
   </body>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+  ></script>
+
+  <script type="text/javascript">
+    emailjs.init("7ZaEaNQzseq5_pRjp");
+  </script>
   <script src="script.js"></script>
 </html>

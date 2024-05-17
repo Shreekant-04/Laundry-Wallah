@@ -1,0 +1,5 @@
+let div = document.createElement("div");
+    div.classList.add("order-placed");
+    div.innerHTML = `Order placed ! <br>
+    Thankyou for using our service`;
+    pop.appendChild(div);
