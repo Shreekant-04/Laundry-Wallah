@@ -436,7 +436,6 @@ main {
   border-radius: 20px;
   margin-top: 5px;
   width: 23%;
-  height: max-content;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -451,7 +450,7 @@ main {
 }
 .newsletter {
   height: 30vmin;
-  margin-top: 5px;
+  margin-top: 10px;
   background-color: #90C2E7;
   display: flex;
   justify-content: center;
@@ -498,6 +497,10 @@ footer div {
   width: 23%;
   padding: 3%;
   
+}
+footer a{
+  text-decoration: none;
+  color: black;
 }
 .imp-link ul {
   list-style: none;
