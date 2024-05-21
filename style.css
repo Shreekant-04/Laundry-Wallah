@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: "Times New Roman", Times, serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   height: 100vh;
 }
@@ -59,7 +62,7 @@ a:hover {
 main {
   display: flex;
   height: 80vh;
-  margin-top: 5vmin;
+  padding-top: 5vmin;
 }
 .quotes,
 .hero {
@@ -85,6 +88,7 @@ main {
   background-repeat: no-repeat;
   cursor: pointer;
 }
+
 .hero-img:hover {
   animation: orbit 1.5s linear infinite;
 }
@@ -126,7 +130,7 @@ main {
   justify-content: center;
 }
 .book-now {
-  background-color: #37718E;
+  background-color: #37718e;
   color: #fff;
   align-self: center;
   height: 8vh;
@@ -147,7 +151,7 @@ main {
 }
 
 .achievement {
-  background-color: #90C2E7;
+  background-color: #90c2e7;
   width: 100%;
   height: 15vmin;
   display: flex;
@@ -164,9 +168,9 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 2%;
+  padding: 10vh 2% 2% 2%;
+  transition: 0.3s;
 }
-
 .service-list {
   width: 50%;
 }
@@ -292,7 +296,7 @@ main {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.cart-view h1{
+.cart-view h1 {
   text-align: center;
   width: 70%;
 }
@@ -359,7 +363,7 @@ main {
 .order {
   width: 70%;
   height: 8vmin;
-  background-color: #37718E;
+  background-color: #37718e;
   color: #fff;
   border: none;
   border-radius: 30px;
@@ -379,15 +383,16 @@ main {
 .book label {
   text-indent: 10px;
 }
-.popup{
+.popup {
   position: fixed;
   bottom: 30px;
-  right:0;
+  right: 0;
 }
-.error,.order-placed{
-  height:10vmin;
+.error,
+.order-placed {
+  height: 10vmin;
   width: 35vmin;
-  background-color: #C4E0F9;
+  background-color: #c4e0f9;
   margin-top: 5px;
   display: flex;
   align-items: center;
@@ -397,10 +402,11 @@ main {
   overflow: hidden;
   border-radius: 10px;
 }
-.error{
+.error {
   color: red;
 }
-.error:after,.order-placed:after{
+.error:after,
+.order-placed:after {
   content: "";
   height: 5px;
   width: 100%;
@@ -410,18 +416,17 @@ main {
   animation: wid 5s linear forwards;
 }
 @keyframes wid {
-  to{
+  to {
     width: 0;
   }
-  
 }
-.error:after{
+.error:after {
   background-color: red;
 }
-.order-placed:after{
+.order-placed:after {
   background-color: green;
 }
-.order-placed{
+.order-placed {
   color: green;
 }
 .quality-description {
@@ -451,7 +456,7 @@ main {
 .newsletter {
   height: 30vmin;
   margin-top: 10px;
-  background-color: #90C2E7;
+  background-color: #90c2e7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -496,14 +501,22 @@ footer div {
   height: 100%;
   width: 23%;
   padding: 3%;
-  
 }
-footer a{
+footer a {
   text-decoration: none;
   color: black;
 }
 .imp-link ul {
   list-style: none;
+}
+.contact {
+  animation: 0.65s 6 linear alternate;
+}
+
+@keyframes scale {
+  to {
+    transform: scale(1.2);
+  }
 }
 .social div {
   width: min-content;
@@ -512,7 +525,6 @@ footer a{
   justify-content: space-evenly;
 }
 @media (max-width: 770px) {
-
   main {
     margin-top: 12%;
     height: 30%;
@@ -523,17 +535,17 @@ footer a{
     font-size: 2vw;
     width: 22vw;
   }
- 
+
   .index,
   .cart,
   .total,
   .book {
     width: 100%;
   }
-  .book h3{
+  .book h3 {
     font-size: 3vw;
   }
-  .services-name div{
+  .services-name div {
     font-size: 2vw;
   }
 
@@ -613,14 +625,13 @@ footer a{
     left: 0;
     z-index: 9;
   }
-  
+
   main {
     margin-top: 18%;
     height: 50vmin;
-  } 
-  .hero-img{
+  }
+  .hero-img {
     background-position: center;
-
   }
   .qoute-1 {
     font-size: 4.5vw;
@@ -652,7 +663,7 @@ footer a{
     font-size: 2.5vw;
     padding: 0;
   }
-  
+
   .cart-view {
     margin-top: 10px;
     padding: 0;
@@ -685,7 +696,6 @@ footer a{
     height: max-content;
     gap: 1%;
     margin-top: 0;
-
   }
   .achievement {
     font-size: 2.5vw;

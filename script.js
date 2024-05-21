@@ -1,15 +1,15 @@
-console.log("hello");
 const serviceName = document.querySelectorAll(".list-item");
-console.log(serviceName);
 //fetching detail to add in cart
 const addBtn = document.querySelectorAll(".add-btn");
 addBtn.forEach((element) => {
   element.addEventListener("click", () => {
     const servName = element.parentElement.children[1].innerText;
     const servPrice = element.parentElement.children[2].innerText;
-    console.log(servName, servPrice);
     addDetail(servName, servPrice);
   });
+});
+document.querySelector(".news-l").addEventListener("click", (e) => {
+  e.preventDefault();
 });
 //fetching detail to remove from cart
 const removeBtn = document.querySelectorAll(".remove-btn");
@@ -18,7 +18,6 @@ removeBtn.forEach((element) => {
   element.addEventListener("click", () => {
     const servName = element.parentElement.children[1].innerText;
     const servPrice = element.parentElement.children[2].innerText;
-    console.log(servName);
     removeDetail(servName);
   });
 });
@@ -35,7 +34,6 @@ const addDetail = (servName, servPrice) => {
               <span class="material-symbols-outlined"> currency_rupee </span>
              <span class=amt> ${servPrice}</span?
             </p>`;
-  console.log(servName, servPrice);
   backgroundChange();
   buttonOpacity();
   sum();
@@ -116,7 +114,6 @@ bookNow.addEventListener("click", () => {
       return false;
     }
     if (hasValue()) {
-      console.log("success");
       bookForm.submit();
     } else {
       fillForm();
@@ -216,4 +213,12 @@ bookForm.addEventListener("submit", function (event) {
       error();
     }
   );
+});
+
+const contact = document.querySelector("#contact-link");
+contact.addEventListener("click", () => {
+  document.querySelector(".contact").style.animationName = "scale";
+  setTimeout(() => {
+    document.querySelector(".contact").style.animationName = "";
+  }, 4000);
 });
