@@ -49,7 +49,7 @@ nav a:first-child {
   color: rgb(0, 110, 255);
 }
 
-a:hover {
+nav a:hover,footer a:hover {
   background-color: rgba(0, 0, 255, 0.164);
 }
 .menu-button,
@@ -131,7 +131,6 @@ main {
 }
 .book-now {
   background-color: #37718e;
-  color: #fff;
   align-self: center;
   height: 8vh;
   width: 20vw;
@@ -141,7 +140,12 @@ main {
   border: none;
   cursor: pointer;
   transition: 0.7s ease-in-out;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  line-height: 8vh;
 }
+
 .book-now:hover {
   transform: rotate(-8deg) scale(1.2, 1.6);
 }
